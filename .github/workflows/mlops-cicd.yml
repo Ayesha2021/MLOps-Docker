@@ -11,6 +11,17 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
 
+# Building docker image instead of using github buildx action 
+job:
+    dockerbuild:
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v4
+        - name: Build the Docker image
+          run: docker build . --file DockerFile --tag FastAPI-ImageBuild-WorkFlow:$(date+%s)
+
+
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
