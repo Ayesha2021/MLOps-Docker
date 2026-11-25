@@ -39,7 +39,7 @@ jobs:
           password: ${{secrets.DOCKER_PASSWORD}}
       - uses: actions/checkout@v4
       - name: Build the Docker image
-        run: docker build . --file DockerFile --tag ${{secrets.DOCKER_USERNAME}}/FastAPI-ImageBuild-WorkFlow:$(date +%s)
+        run: docker build . --file DockerFile --tag ${{secrets.DOCKER_USERNAME}}/fastapi-imagebuild-workflow:$(date +%s)
 
   build-and-publish:
     needs: build-and-test
