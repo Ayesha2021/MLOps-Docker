@@ -15,4 +15,4 @@ RUN pip install flask
 EXPOSE 8080
 
 # Run app.py when container launches
-CMD ["pyhon", "app.py"]
+CMD ["python", "app.py"]
