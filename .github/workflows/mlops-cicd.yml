@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
 # Building docker image instead of using github buildx action 
-job:
+jobs:
     dockerbuild:
         runs-on: ubuntu-latest
         steps:
