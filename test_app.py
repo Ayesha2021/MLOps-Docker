@@ -6,4 +6,4 @@ def test_home():
     response = app.test_client().get("/")
 
     assert response.status_code == 200
-    assert response.data == "Flask App Up and Running!"
+    assert response.data == b"Flask App Up and Running!"
